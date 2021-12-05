@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        background: #272727;
+        color: #e6e6e6;
+      }
+
+      body {
+        font-family: sans-serif;
+      }
+
+      section {
+        margin: auto;
+        max-width: 28em;
+      }
+
+      ul > li {
+        margin-top: 9px;
+      }
+
+      h2 {
+        font-size: 3em;
+        text-align: center;
+      }
+      h4 {
+        font-size: 2em;
+      }
+
+      article {
+        padding-bottom: 1em;
+        border-bottom: 1px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <article>
+          <h2>Layers</h2>
+          <p>
+            Una layer (capa) es una sección que se pone sobre otra para mostra
+            contenido o secciones diferente de la app
+          </p>
+        </article>
+
+        <article>
+          <h4>Creacion de una Layer</h4>
+          <ul>
+            <li>Debe contener la clase layer</li>
+            <li>
+              Debe contener el id de la siguiente forma layer-[nombreDeCapa]
+            </li>
+            <li>
+              Debe contener data-layer-title = "titulo de la capa", este titulo
+              aparecera en el header cuando la capa actual este activa
+            </li>
+          </ul>
+          <div class="code">
+            &lt;div class="layer" id="layer-quiz"
+            data-layer-title="juega"&gt;&lt;/div&gt;
+          </div>
+        </article>
+
+        <article>
+          <h4>Mostrar una capa</h4>
+          <p>
+            Para mostrar o abrir una capa hay dos formas, mediante javascript
+            directo y con elementos html
+          </p>
+        </article>
+        <article>
+          <h4>Mostrar capa con js</h4>
+          <p>
+            Para abrir una capa simplemente se llama a la función
+            openLayer(layerName): ejemplo:
+          </p>
+          <div class="code">openLayer("quiz");</div>
+        </article>
+        <article>
+          <h4>Mostrar capa con html</h4>
+          <p>
+            Para ello debemos asignar los siguientes atributos a cualquier
+            elemento en html:
+          </p>
+          <ul>
+            <li>Debe contener la clase trigger-layer</li>
+            <li>Debe contener data-open-layer="nombreDeCapa"</li>
+          </ul>
+          <p>Ejemplo con el elemento button:</p>
+          <div class="code">
+            &lt;button class="trigger-layer"
+            data-open-layer="quiz"&gt;Jugar&lt;/button&gt;
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
